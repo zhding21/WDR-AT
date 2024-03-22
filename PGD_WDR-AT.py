@@ -114,21 +114,7 @@ def main():
                 output = model(X + delta)
                 adv_loss_mean = mean_criterion(output, y)
                 adv_loss_none = none_criterion(output, y)
-
-                model.eval()
-                with torch.no_grad():
-                    real_output = model(X)
-                    real_loss_mean = mean_criterion(real_output, y)
-                    real_loss_none = none_criterion(real_output, y)
-                model.train()
-
-                loss_diff_mean = (adv_loss_mean - real_loss_mean).abs() * alp
-                k = 0
-                for adv_loss_val, real_loss_val in zip(adv_loss_none.tolist(), real_loss_none.tolist()):
-                    loss_diff_val = adv_loss_val - real_loss_val
-                    if loss_diff_mean < loss_diff_val:
-                        keywords[k] = 1
-                    k += 1
+                
                 loss = criterion(output, F.one_hot(y, num_classes=10), keywords)
                 opt.zero_grad()
                 loss.backward()
