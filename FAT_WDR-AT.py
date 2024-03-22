@@ -72,8 +72,6 @@ def main():
                               weight_decay=args.weight_decay)
         # criterion = nn.CrossEntropyLoss()
         criterion = WeightedCrossEntropyLoss(bet)
-        none_criterion = nn.CrossEntropyLoss(reduction='none')
-        mean_criterion = nn.CrossEntropyLoss()
 
         if args.delta_init == 'previous':
             delta = torch.zeros(args.batch_size, 3, 32, 32).cuda()
@@ -116,8 +114,6 @@ def main():
 
                 keywords = torch.zeros(X.size(0))
                 output = model(X + delta[:X.size(0)])
-                adv_loss_mean = mean_criterion(output, y)
-                adv_loss_none = none_criterion(output, y)
                 weight = get_weight(keywords, model, X, X + delta[:X.size(0)], y)
                 loss = criterion(output, F.one_hot(y, num_classes=10), weight)
                 opt.zero_grad()
