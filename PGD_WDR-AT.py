@@ -11,7 +11,7 @@ import torch.nn.functional as F
 from bayes_opt import BayesianOptimization
 
 from model import ResNet18
-from util import upper_limit, lower_limit, std, clamp, get_loaders, evaluate_pgd, evaluate_standard, WeightedCrossEntropyLoss
+from util import upper_limit, lower_limit, std, clamp, get_loaders, evaluate_pgd, evaluate_standard, WeightedCrossEntropyLoss, get_weight
 
 
 logger = logging.getLogger(__name__)
@@ -73,8 +73,6 @@ def main():
         opt = torch.optim.SGD(model.parameters(), lr=args.lr_max, momentum=args.momentum, weight_decay=args.weight_decay)
         # delta_criterion = nn.CrossEntropyLoss()
         criterion = WeightedCrossEntropyLoss(bet)
-        none_criterion = nn.CrossEntropyLoss(reduction='none')
-        mean_criterion = nn.CrossEntropyLoss()
 
         lr_steps = args.epochs * len(train_loader)
         if args.lr_schedule == 'cyclic':
@@ -112,9 +110,7 @@ def main():
 
                 keywords = torch.zeros(X.size(0))
                 output = model(X + delta)
-                adv_loss_mean = mean_criterion(output, y)
-                adv_loss_none = none_criterion(output, y)
-                
+                get_weight
                 loss = criterion(output, F.one_hot(y, num_classes=10), keywords)
                 opt.zero_grad()
                 loss.backward()
