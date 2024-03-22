@@ -110,8 +110,9 @@ def main():
 
                 keywords = torch.zeros(X.size(0))
                 output = model(X + delta)
-                get_weight
-                loss = criterion(output, F.one_hot(y, num_classes=10), keywords)
+                weight = get_weight(keywords, model, X, X + delta, y)
+                loss = criterion(output, F.one_hot(y, num_classes=10), weight)
+
                 opt.zero_grad()
                 loss.backward()
                 opt.step()
