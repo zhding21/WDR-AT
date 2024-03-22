@@ -11,7 +11,7 @@ import torch.nn.functional as F
 from bayes_opt import BayesianOptimization
 
 from model import ResNet18
-from util import upper_limit, lower_limit, std, clamp, get_loaders, evaluate_pgd, evaluate_standard, WeightedCrossEntropyLoss
+from util import upper_limit, lower_limit, std, clamp, get_loaders, evaluate_pgd, evaluate_standard, WeightedCrossEntropyLoss, get_weight
 
 logger = logging.getLogger(__name__)
 
@@ -118,8 +118,8 @@ def main():
                 output = model(X + delta[:X.size(0)])
                 adv_loss_mean = mean_criterion(output, y)
                 adv_loss_none = none_criterion(output, y)
-
-                loss = criterion(output, F.one_hot(y, num_classes=10), keywords)
+                weight = get_weight(keywords, model, X, X + delta[:X.size(0)], y)
+                loss = criterion(output, F.one_hot(y, num_classes=10), weight)
                 opt.zero_grad()
 
                 loss.backward()
