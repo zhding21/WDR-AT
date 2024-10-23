@@ -52,4 +52,4 @@ For experiments on other comparison methods in the paper, please refer to the fo
 - `TRADES AT`: https://github.com/geyao1995/advancing-example-exploitation-in-adversarial-training
 
 #### Citation:
-If you need to use the code about WDR-AT, please cite this paper.
+Weight Decay Regularized Adversarial Training for Attacking Angle Imbalance
