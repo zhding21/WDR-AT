@@ -40,10 +40,10 @@ To evaluate the performance of each adversarial model, you can execute:
 python3 Evaluation.py
 ```
 
-For experiments on other comparison methods in the paper, please refer to the following code:
-Sub AT: https://github.com/nblt/Sub-AT
-MEP AT： https://github.com/Mengnan-Zhao-Happy/ConvergeSmooth
-TRADES AT: https://github.com/geyao1995/advancing-example-exploitation-in-adversarial-training
+For experiments on other comparison methods in the paper, please refer to the following code: 
+- `Sub AT`: https://github.com/nblt/Sub-AT
+- `MEP AT`： https://github.com/Mengnan-Zhao-Happy/ConvergeSmooth
+- `TRADES AT`: https://github.com/geyao1995/advancing-example-exploitation-in-adversarial-training
 
 #### Citation:
 If you need to use the code about WDR-AT, please cite this paper.
