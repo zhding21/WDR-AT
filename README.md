@@ -1,3 +1,9 @@
+# WDR AT
+This directory contains code to reproduce the results in our paper:
+
+"Weight Decay Regularized Adversarial Training for Attacking Angle Imbalance" by Guorong Wang, Jinchuan Tang, Zehua Ding, Shuping Dang, Gaojie Chen.
+
+
 #### Adversarial Training
 To train an adversarial training model called FGSM contrast method, you can execute:
 ```
