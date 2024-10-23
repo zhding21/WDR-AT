@@ -4,7 +4,7 @@ This directory contains code to reproduce the results in our paper:
 "Weight Decay Regularized Adversarial Training for Attacking Angle Imbalance" by Guorong Wang, Jinchuan Tang, Zehua Ding, Shuping Dang, Gaojie Chen.
 
 #### Training datasets
-Four datasets are used in our paper, including: MNIST (), CIFAR-10\100 (), and Tiny-ImageNet ().
+Four datasets are used in our paper, including: MNIST (https://yann.lecun.com/exdb/mnist/), CIFAR-10\100 (http://www.cs.toronto.edu/~kriz/cifar.html), and Tiny-ImageNet (https://www.kaggle.com/c/tiny-imagenet/data).
 
 #### Adversarial Training
 To train an adversarial training model called FGSM contrast method, you can execute:
