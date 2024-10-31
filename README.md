@@ -74,16 +74,21 @@ python3 Sub-AT-main-WDR-Step1.py
 python3 Sub-AT-main-WDR-Step2.py
 ```
 
+To train an adversarial training model for the comparison method named TRADES (code reference: https://github.com/geyao1995/advancing-example-exploitation-in-adversarial-training), you can execute:
+```
+python3 TRADES-AT/TRADES-main.py
+```
+
+To train an adversarial training model for our TRADES method, you can execute:
+```
+python3 TRADES-AT-WDR/TRADES-main-WDR.py
+```
+
 #### Adversarial Attack Evaluation
 To evaluate the performance of each adversarial model, you can execute:
 ```
 python3 Evaluation.py
 ```
-
-For experiments on other comparison methods in the paper, please refer to the following code: 
-- `Sub AT`: https://github.com/nblt/Sub-AT
-- `MEP AT`： https://github.com/Mengnan-Zhao-Happy/ConvergeSmooth
-- `TRADES AT`: https://github.com/geyao1995/advancing-example-exploitation-in-adversarial-training
 
 #### Citation:
 If you need to use the code about WDR-AT, please cite this paper: Weight Decay Regularized Adversarial Training for Attacking Angle Imbalance.
