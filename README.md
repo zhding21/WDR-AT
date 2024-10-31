@@ -42,7 +42,7 @@ To train an adversarial training model for our PGI method, you can execute:
 python3 PGI-main-WDR.py
 ```
 
-To train an adversarial training model for the comparison method named MEP (code reference: [https://github.com/jiaxiaojunQAQ/FGSM-PGI](https://github.com/Mengnan-Zhao-Happy/ConvergeSmooth)), you can execute:
+To train an adversarial training model for the comparison method named MEP (code reference: https://github.com/Mengnan-Zhao-Happy/ConvergeSmooth), you can execute:
 ```
 python3 MEP-main.py
 ```
