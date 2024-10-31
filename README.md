@@ -15,13 +15,13 @@ To train an adversarial training model of our FGSM method, you can execute:
 ```
 python3 FGSM-main-WDR.py
 ```
-To train an adversarial training model called FAT contrast method, you can execute:
+To train an adversarial training model called FAST contrast method, you can execute:
 ```
-python3 FAT-main.py
+python3 FAST-main.py
 ```
-To train an adversarial training model of our FAT method, you can execute:
+To train an adversarial training model of our FAST method, you can execute:
 ```
-python3 FAT-main-WDR.py
+python3 FAST-main-WDR.py
 ```
 To train an adversarial training model called PGD contrast method, you can execute:
 ```
