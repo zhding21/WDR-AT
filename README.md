@@ -89,6 +89,16 @@ To train an adversarial training model for our TRADES method, you can execute:
 python3 TRADES-AT-WDR/TRADES-main-WDR.py
 ```
 
+To train an adversarial training model for the comparison method named Fast (code reference: https://github.com/geyao1995/advancing-example-exploitation-in-adversarial-training), you can execute:
+```
+python3 TRADES-AT/Fast-main.py
+```
+
+To train an adversarial training model for our Fast method, you can execute:
+```
+python3 TRADES-AT-WDR/Fast-main-WDR.py
+```
+
 #### Adversarial Attack Evaluation
 To evaluate the performance of each adversarial model, you can execute:
 ```
