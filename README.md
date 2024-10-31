@@ -52,16 +52,6 @@ To train an adversarial training model for our MEP method, you can execute:
 python3 MEP-main-WDR.py
 ```
 
-To train an adversarial training model for the comparison method named MEP (code reference: https://github.com/Mengnan-Zhao-Happy/ConvergeSmooth), you can execute:
-```
-python3 MEP-main.py
-```
-
-To train an adversarial training model for our MEP method, you can execute:
-```
-python3 MEP-main-WDR.py
-```
-
 To train an adversarial training model for the comparison method named Sub (code reference: https://github.com/nblt/Sub-AT), you can execute:
 ```
 python3 Sub-AT-main-Step1.py
