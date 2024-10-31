@@ -80,5 +80,7 @@ To evaluate the performance of each adversarial model, you can execute:
 python3 Evaluation.py
 ```
 
+Please note that you must run the code in a fair environment, that is, the model architecture and training settings must be consistent across methods.
+
 #### Citation:
 If you need to use the code about WDR-AT, please cite this paper: Weight Decay Regularized Adversarial Training for Attacking Angle Imbalance.
