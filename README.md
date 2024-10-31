@@ -7,7 +7,7 @@ This directory contains code to reproduce the results in our paper:
 Four datasets are used in our paper, including: MNIST (https://yann.lecun.com/exdb/mnist/), CIFAR-10\100 (http://www.cs.toronto.edu/~kriz/cifar.html), and Tiny-ImageNet (https://www.kaggle.com/c/tiny-imagenet/data).
 
 #### Adversarial Training
-To train an adversarial training model called FGSM contrast method, you can execute:
+To train an adversarial training model called FGSM (code reference: ) contrast method, you can execute:
 ```
 python3 FGSM-main.py
 ```
@@ -17,7 +17,7 @@ To train an adversarial training model of our FGSM method, you can execute:
 python3 FGSM-main-WDR.py
 ```
 
-To train an adversarial training model called FAST contrast method, you can execute:
+To train an adversarial training model called FAST (code reference: https://github.com/locuslab/fast_adversarial) contrast method, you can execute:
 ```
 python3 FAST-main.py
 ```
@@ -27,7 +27,7 @@ To train an adversarial training model of our FAST method, you can execute:
 python3 FAST-main-WDR.py
 ```
 
-To train an adversarial training model called Free contrast method, you can execute:
+To train an adversarial training model called Free (code reference: https://github.com/ashafahi/free_adv_train) contrast method, you can execute:
 ```
 python3 Free-main.py
 ```
@@ -37,7 +37,7 @@ To train an adversarial training model of our Free method, you can execute:
 python3 Free-main-WDR.py
 ```
 
-To train an adversarial training model called PGD contrast method, you can execute:
+To train an adversarial training model called PGD (code reference: https://github.com/MadryLab/mnist_challenge) contrast method, you can execute:
 ```
 python3 PGD-main.py
 ```
