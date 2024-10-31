@@ -11,22 +11,37 @@ To train an adversarial training model called FGSM contrast method, you can exec
 ```
 python3 FGSM-main.py
 ```
+
 To train an adversarial training model of our FGSM method, you can execute:
 ```
 python3 FGSM-main-WDR.py
 ```
+
 To train an adversarial training model called FAST contrast method, you can execute:
 ```
 python3 FAST-main.py
 ```
+
 To train an adversarial training model of our FAST method, you can execute:
 ```
 python3 FAST-main-WDR.py
 ```
+
+To train an adversarial training model called Free contrast method, you can execute:
+```
+python3 Free-main.py
+```
+
+To train an adversarial training model of our Free method, you can execute:
+```
+python3 Free-main-WDR.py
+```
+
 To train an adversarial training model called PGD contrast method, you can execute:
 ```
 python3 PGD-main.py
 ```
+
 To train an adversarial training model of our PGD method, you can execute:
 ```
 python3 PGD-main-WDR.py
